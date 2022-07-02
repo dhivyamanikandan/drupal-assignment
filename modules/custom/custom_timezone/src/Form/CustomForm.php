@@ -1,9 +1,9 @@
 <?php  
 /**  
  * @file  
- * Contains Drupal\timezone\Form\CustomForm.  
+ * Contains Drupal\custom_timezone\Form\CustomForm.  
  */  
-namespace Drupal\timezone\Form;  
+namespace Drupal\custom_timezone\Form;  
 use Drupal\Core\Form\ConfigFormBase;  
 use Drupal\Core\Form\FormStateInterface;  
   
@@ -13,7 +13,7 @@ class CustomForm extends ConfigFormBase {
    */  
   protected function getEditableConfigNames() {  
     return [  
-      'timezone.adminsettings',  
+      'custom_timezone.adminsettings',  
     ];  
   }  
   
@@ -21,14 +21,14 @@ class CustomForm extends ConfigFormBase {
    * {@inheritdoc}  
    */  
   public function getFormId() {  
-    return 'timezone_form';  
+    return 'custom_timezone_form';  
   }  
 
    /**  
    * {@inheritdoc}  
    */  
   public function buildForm(array $form, FormStateInterface $form_state) {  
-    $config = $this->config('timezone.adminsettings');  
+    $config = $this->config('custom_timezone.adminsettings');  
   
     $form['country'] = [ 
         '#type' => 'textfield',
@@ -53,8 +53,8 @@ class CustomForm extends ConfigFormBase {
   }  
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $config = $this->config('timezone.settings');
-    $config->set('timezonesettings', $form_state->getValue('timezonesettings'));
+    $config = $this->config('custom_timezone.settings');
+    $config->set('custom_timezonesettings', $form_state->getValue('custom_timezonesettings'));
     $config->save();
     parent::submitForm($form, $form_state);
   }

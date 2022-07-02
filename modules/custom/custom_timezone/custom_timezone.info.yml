@@ -1,4 +1,4 @@
-name: Timezone  
+name: Custom Timezone  
 type: module  
 description: Current time of the location  
 core_version_requirement: ^8 || ^9

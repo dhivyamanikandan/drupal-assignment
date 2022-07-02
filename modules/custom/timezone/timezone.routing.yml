@@ -1,9 +1,0 @@
-timezone.settings_form:  
-  path: 'timezone/form'  
-  defaults:  
-    _form: '\Drupal\timezone\Form\CustomForm'  
-    _title: 'CustomForm'  
-  requirements:  
-    _permission: 'access administration pages'  
-  options:  
-    _admin_route: TRUE  
