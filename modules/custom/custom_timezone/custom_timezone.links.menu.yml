@@ -1,0 +1,5 @@
+custom_timezone.settings:
+  title: Custom Timezone
+  description: 'To have a menu in the Timezone.'
+  route_name: custom_timezone.settings
+  parent: system.admin_config_services

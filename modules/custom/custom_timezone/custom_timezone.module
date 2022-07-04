@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ */
+
+function custom_timezone_theme(){
+    return [
+        'display_time_zone' => [
+            'variables' => [
+                'displaytimezone' => []
+            ],
+        ],
+    ];
+}

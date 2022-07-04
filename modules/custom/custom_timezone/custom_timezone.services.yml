@@ -1,0 +1,4 @@
+services:
+  custom_timezone.ctdetails:
+    class: Drupal\custom_timezone\Services\CTdetails
+    arguments: []

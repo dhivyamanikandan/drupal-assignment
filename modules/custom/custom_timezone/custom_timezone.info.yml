@@ -1,6 +1,7 @@
-name: Custom Timezone  
-type: module  
-description: Current time of the location  
+name: Timezone
+description: 'Functionality to get the current timezone'
+type: module
+core: 8.x
 core_version_requirement: ^8 || ^9
-project: 'drupal'
-package: Custom  
+
+configure: custom_timezone.custom_timezone_settings
