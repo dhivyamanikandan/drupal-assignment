@@ -13,14 +13,16 @@ use Drupal\Core\Cache\Cache;
  *   admin_label = @Translation("Display Timezone")
  * )
  */
+
 class DisplayTimeZone extends BlockBase {
 
   /**
    * {@inheritdoc}
    */
+
   public function build() {
+
     $getdisplaytimezone = \Drupal::service('custom_timezone.ctdetails')->getCTdetails();
-   // \Drupal::messenger()->addStatus('<pre>'. print_r($getdisplaytimezone,TRUE),'</pre>');
 
     return [
       '#theme' => 'display_time_zone',
@@ -29,6 +31,7 @@ class DisplayTimeZone extends BlockBase {
         'max-age' => 0
       ]
     ];
+    
   }
 
 }
